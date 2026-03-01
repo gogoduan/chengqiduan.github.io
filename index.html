@@ -1,1 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chengqi Duan | The University of Hong Kong</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+            color: #334155;
+        }
+        /* Styling for the author names to highlight the owner */
+        .author-highlight {
+            font-weight: 700;
+            color: #0f172a;
+        }
+        .nav-link {
+            transition: color 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #2563eb;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 40px;
+            background-color: #2563eb;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="antialiased">
 
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 shadow-sm">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-800 tracking-tight">Chengqi Duan</a>
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#news" class="nav-link">News</a>
+                <a href="#education" class="nav-link">Education</a>
+                <a href="#publications" class="nav-link">Publications</a>
+                <a href="#internships" class="nav-link">Internships</a>
+            </div>
+            <!-- Mobile Menu Button (Optional functionality can be added via JS) -->
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+        <!-- Hero / Profile Section -->
+        <section id="about" class="flex flex-col-reverse md:flex-row items-center gap-10 mb-20 pt-8">
+            <div class="flex-1 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Chengqi Duan</h1>
+                <p class="text-xl text-blue-600 font-medium mb-6">PhD Student at The University of Hong Kong</p>
+                
+                <p class="text-gray-700 leading-relaxed mb-6 text-left">
+                    I am currently a second-year PhD student in the Institute of Data Science at <strong>The University of Hong Kong</strong>, supervised by 
+                    <a href="https://xh-liu.github.io/" target="_blank" class="text-blue-600 hover:underline">Prof. Xihui Liu</a> and <a href="https://www.ai.hku.hk/people/academic-staff/mayi" target="_blank" class="text-blue-600 hover:underline">Prof. Yi Ma</a>. 
+                    Prior to joining HKU, I received my Bachelor's degree in Department of Computer Science and Technology from <strong>Tsinghua University</strong> in 2024, where I was fortunate to work closely with 
+                    <a href="https://www.cs.tsinghua.edu.cn/csen/info/1313/4403.htm" target="_blank" class="text-blue-600 hover:underline">Prof. Hang Su</a> and <a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank" class="text-blue-600 hover:underline">Prof. Jun Zhu</a>.
+                </p>
+                <p class="text-gray-700 leading-relaxed mb-6 text-left">
+                    My research interests primarily lie in  <strong>AIGC</strong>, <strong>Reinforcement Learning</strong> and <strong>Unified Models</strong>.
+
+                <!-- Social & Contact Links -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+                    <button onclick="copyEmail(this)" class="flex items-center gap-2 bg-gray-800 text-white px-4 py-2 rounded-lg hover:bg-gray-700 transition shadow-sm">
+                        <i class="fas fa-envelope"></i> <span class="email-text">duancq24 [at] connect.hku.hk</span>
+                    </button>
+                    <a href="https://github.com/gogoduan" target="_blank" class="flex items-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition shadow-sm border border-gray-200">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=r9qb4ZwAAAAJ&hl=zh-CN" target="_blank" class="flex items-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition shadow-sm border border-gray-200">
+                        <i class="fas fa-graduation-cap"></i> Google Scholar
+                    </a>
+                    <a href="https://www.semanticscholar.org/author/Chengqi-Duan/2326302007" target="_blank" class="flex items-center gap-2 bg-gray-100 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-200 transition shadow-sm border border-gray-200">
+                        <i class="fas fa-book-open"></i> Semantic Scholar
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="w-48 h-48 md:w-64 md:h-64 shrink-0">
+                <!-- Replace src with your actual photo URL -->
+                <img src="fig.jpg" alt="Chengqi Duan" class="w-full h-full object-cover rounded-2xl shadow-xl border-4 border-white">
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section id="news" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 section-title">Recent News</h2>
+            <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
+                <ul class="space-y-4">
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Feb 2026</span>
+                        <span class="text-gray-700"><strong>1 main paper</strong> and <strong>1 findings paper</strong> are accepted to <strong>CVPR 2026</strong>!</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Jan 2026</span>
+                        <span class="text-gray-700"><strong>2 papers</strong> are accepted to <strong>ICLR 2026</strong>!</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Sep 2025</span>
+                        <span class="text-gray-700"><strong>1 paper</strong> is accepted to <strong>NeurIPS 2025</strong>!</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Jun 2025</span>
+                        <span class="text-gray-700"><strong>1 paper</strong> is accepted to <strong>ICCV 2025</strong>!</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Sep 2024</span>
+                        <span class="text-gray-700">Started my PhD journey at the Institute of Data Science, The University of Hong Kong! Honored to receive the HKU Presidential PhD Scholarship and Hong Kong PhD Fellowship Scheme.</span>
+                    </li>
+                    <li class="flex gap-4">
+                        <span class="font-medium text-blue-600 whitespace-nowrap">Jul 2024</span>
+                        <span class="text-gray-700">Graduated with a Bachelor of Computer Science from Tsinghua University.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 section-title">Education</h2>
+            <div class="space-y-8">
+                <!-- HKU -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-24 h-24 shrink-0 hidden md:flex items-center justify-center bg-gray-50 rounded-lg p-2">
+                        <img src="https://www.hku.hk/f/page/7561/150p169/1d@750.jpg" alt="HKU Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">The University of Hong Kong (HKU)</h3>
+                            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-max mt-2 md:mt-0">Sep 2024 - Present</span>
+                        </div>
+                        <p class="text-lg font-medium text-gray-800">PhD in Institute of Data Science</p>
+                        <p class="text-gray-600 mt-2">Supervised by <strong><a href="https://xh-liu.github.io/" target="_blank" class="hover:text-blue-600 hover:underline">Prof. Xihui Liu</a></strong> and <strong><a href="https://www.ai.hku.hk/people/academic-staff/mayi" target="_blank" class="hover:text-blue-600 hover:underline">Prof. Yi Ma</a></strong>.</p>
+                        <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt"></i> Hong Kong</p>
+                    </div>
+                </div>
+
+                <!-- Tsinghua -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-24 h-24 shrink-0 hidden md:flex items-center justify-center bg-gray-50 rounded-lg p-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Tsinghua_University_Logo.svg" alt="Tsinghua Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Tsinghua University</h3>
+                            <span class="text-sm font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full w-max mt-2 md:mt-0">Sep 2020 - Jul 2024</span>
+                        </div>
+                        <p class="text-lg font-medium text-gray-800">Bachelor of Computer Science</p>
+                        <p class="text-gray-600 mt-2">Worked closely with <strong><a href="https://www.cs.tsinghua.edu.cn/csen/info/1313/4403.htm" target="_blank" class="hover:text-blue-600 hover:underline">Prof. Hang Su</a></strong> and <strong><a href="https://ml.cs.tsinghua.edu.cn/~jun/index.shtml" target="_blank" class="hover:text-blue-600 hover:underline">Prof. Jun Zhu</a></strong>.</p>
+                        <ul class="list-disc list-inside text-gray-600 mt-2 text-sm">
+                            <li>GPA: 3.75/4.0</li>
+                        </ul>
+                        <p class="text-gray-500 text-sm mt-1"><i class="fas fa-map-marker-alt"></i> Beijing, China</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 section-title">Selected Publications <span class="text-sm font-normal text-gray-500 ml-2">(* denotes equal contribution)</span></h2>
+            <p class="text-sm text-gray-500 mb-6 -mt-4">Citation counts are given by <a href="https://www.semanticscholar.org/author/Chengqi-Duan/2326302007" target="_blank" class="text-blue-500 hover:underline">Semantic Scholar</a>.</p>
+            
+            <div class="space-y-6">
+                <!-- Paper 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">GoT-R1: Unleashing Reasoning Capability of MLLM for Visual Generation with Reinforcement Learning</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        <span class="author-highlight">Chengqi Duan*</span>, Rongyao Fang*, Yuqing Wang*, Kun Wang, Linjiang Huang, Xingyu Zeng, Hongsheng Li, Xihui Liu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">ICLR 2026</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="6f0f8f5d11207a4ba26c1a72b9f0e497357d3845" data-title="GoT-R1"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">CodePlot-CoT: Mathematical Visual Reasoning by Thinking with Code-Driven Images</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        <span class="author-highlight">Chengqi Duan*</span>, Kaiyue Sun*, Rongyao Fang*, Manyuan Zhang, Yan Feng, Ying Luo, Yufang Liu, Ke Wang, Peng Pei, Xunliang Cai, Hongsheng Li, Yi Ma, Xihui Liu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">CVPR 2026 Findings</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="3154ea582851e6eac44eee8bb863d68ef0410d14" data-title="CodePlot-CoT"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 4 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">T2I-CompBench++: An Enhanced and Comprehensive Benchmark for Compositional Text-to-image Generation</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Kaiyi Huang, <span class="author-highlight">Chengqi Duan</span>, Kaiyue Sun, Enze Xie, Zhenguo Li, and Xihui Liu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-red-50 text-red-700 border border-red-100 rounded">TPAMI</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="770e5bf7158d75c2d4bdfd2bf4e4e48edc828654" data-title="T2I-CompBench++"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 5 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Got: Unleashing reasoning capability of multimodal large language model for visual generation and editing</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Rongyao Fang*, <span class="author-highlight">Chengqi Duan*</span>, Kun Wang, Linjiang Huang, Hao Li, Hao Tian, Shilin Yan, Weihao Yu, Xingyu Zeng, Jifeng Dai, Xihui Liu, Hongsheng Li.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">NeurIPS 2025</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="d042220199383fd31ed5a896f4bd03b23477f061" data-title="Got"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">FLUX-Reason-6M & PRISM-Bench: A Million-Scale Text-to-Image Reasoning Dataset and Comprehensive Benchmark</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Rongyao Fang*, Aldrich Yu*, <span class="author-highlight">Chengqi Duan*</span>, Linjiang Huang, Shuai Bai, Yuxuan Cai, Kun Wang, Si Liu, Xihui Liu, Hongsheng Li.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">ICLR 2026</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="1801e22c16090ae6b11489efaba5f8c51ac123ea" data-title="FLUX-Reason-6M"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 6 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">PUMA: Empowering Unified MLLM with Multi-granular Visual Generation</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Rongyao Fang*, <span class="author-highlight">Chengqi Duan*</span>, Kun Wang, Hao Li, Hao Tian, Xingyu Zeng, Rui Zhao, Jifeng Dai, Hongsheng Li, Xihui Liu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">ICCV 2025</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="40ed1bf00e9eebec89a5e21ac266d12faa69af6f" data-title="PUMA"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 7 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">T2I-ReasonBench: Benchmarking Reasoning-Informed Text-to-Image Generation</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Kaiyue Sun, Rongyao Fang, <span class="author-highlight">Chengqi Duan</span>, Xian Liu, Xihui Liu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-gray-100 text-gray-600 rounded">Preprint</span>
+                        <!-- Precise Search with Paper ID -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="fca6507f1f8fb076a9975b62d1ee75e867f134e3" data-title="T2I-ReasonBench"></span>
+                    </div>
+                </div>
+
+                <!-- Paper 8 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition">
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Robust Classification via Single Diffusion Model</h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-2">
+                        Huanran Chen, Yinpeng Dong, Zhengyi Wang, Xiao Yang, <span class="author-highlight">Chengqi Duan</span>, Hang Su, Jun Zhu.
+                    </p>
+                    <div class="flex gap-2 mt-3 flex-wrap">
+                        <span class="text-xs font-semibold px-2 py-1 bg-blue-50 text-blue-700 border border-blue-100 rounded">ICML 2024</span>
+                        <!-- Fallback to title search if no ID provided -->
+                        <span class="citation-count text-xs font-semibold px-2 py-1 bg-green-50 text-green-700 rounded hidden items-center" data-paper-id="762b42dd957071dd7f5add9435d29edb3b4cbefc" data-title="Robust Classification via Single Diffusion Model"></span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Internship Experience Section -->
+        <section id="internships" class="mb-20 scroll-mt-24">
+            <h2 class="text-2xl font-bold text-gray-900 section-title">Internship Experience</h2>
+            <div class="space-y-8">
+                <!-- Meituan -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-24 h-24 shrink-0 hidden md:flex items-center justify-center bg-gray-50 rounded-lg p-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e2/%E7%BE%8E%E5%9B%A2_Logo.png" alt="Meituan Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">Meituan (美团)</h3>
+                            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-max mt-2 md:mt-0">Jun 2025 - Present</span>
+                        </div>
+                        <p class="text-lg font-medium text-gray-800">Research Intern</p>
+                    </div>
+                </div>
+
+                <!-- SenseTime -->
+                <div class="flex flex-col md:flex-row gap-4 md:gap-8 bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="w-24 h-24 shrink-0 hidden md:flex items-center justify-center bg-gray-50 rounded-lg p-3">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/90/SenseTime_Logo-Alternate.jpg" alt="SenseTime Logo" class="w-full h-full object-contain">
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex flex-col md:flex-row justify-between md:items-center mb-2">
+                            <h3 class="text-xl font-bold text-gray-900">SenseTime (商汤科技)</h3>
+                            <span class="text-sm font-medium text-gray-600 bg-gray-100 px-3 py-1 rounded-full w-max mt-2 md:mt-0">Sep 2024 - Jun 2025</span>
+                        </div>
+                        <p class="text-lg font-medium text-gray-800">Research Intern</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two Columns: Honors & Skills -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-20">
+            <!-- Honors -->
+            <section id="honors">
+                <h2 class="text-2xl font-bold text-gray-900 section-title">Honors & Awards</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <i class="fas fa-award text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">HKU Presidential PhD Scholarship (HKUPS)</p>
+                            <p class="text-sm text-gray-500">2024</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-award text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">Hong Kong PhD Fellowship Scheme (HKPFS)</p>
+                            <p class="text-sm text-gray-500">2024</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-medal text-gray-400 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">Sports Scholarship, Tsinghua University</p>
+                            <p class="text-sm text-gray-500">2023</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-trophy text-orange-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">3rd Place in Artificial Intelligence Security Competition</p>
+                            <p class="text-sm text-gray-500">2022</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-trophy text-yellow-500 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">1st Prize in National Olympiad in Informatics in Provinces (NOIP)</p>
+                            <p class="text-sm text-gray-500">Beijing, 2018</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-trophy text-gray-400 mt-1 mr-3"></i>
+                        <div>
+                            <p class="font-bold text-gray-800">2nd Prize in National Olympiad in Informatics in Provinces (NOIP)</p>
+                            <p class="text-sm text-gray-500">Beijing, 2017</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Skills -->
+            <section id="skills">
+                <h2 class="text-2xl font-bold text-gray-900 section-title">Skills & Proficiencies</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="mb-4">
+                        <h3 class="font-bold text-gray-800 mb-2">Languages</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-100">Python</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-100">C++</span>
+                            <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-lg text-sm font-medium border border-blue-100">C</span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <h3 class="font-bold text-gray-800 mb-2">Frameworks</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-red-50 text-red-700 rounded-lg text-sm font-medium border border-red-100">PyTorch</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-100">Django</span>
+                            <span class="px-3 py-1 bg-green-50 text-green-700 rounded-lg text-sm font-medium border border-green-100">Flask</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-800 mb-2">Tools & Databases</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200">Git</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200">MySQL</span>
+                            <span class="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm font-medium border border-gray-200">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 mt-12 py-8">
+        <div class="max-w-5xl mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="year"></span> Chengqi Duan. All rights reserved.</p>
+            <p class="mt-2">Designed and built for academic portfolio.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Email copy function
+        function copyEmail(btn) {
+            const email = "duancq24@connect.hku.hk";
+            const el = document.createElement('textarea');
+            el.value = email;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            
+            const span = btn.querySelector('.email-text');
+            const originalText = span.innerText;
+            span.innerText = "Copied!";
+            setTimeout(() => { span.innerText = originalText; }, 2000);
+        }
+
+        // Fetch Semantic Scholar Citations with Queue and Retry Logic
+        async function fetchCitations() {
+            const citationElements = Array.from(document.querySelectorAll('.citation-count'));
+            
+            // 1. 初始化所有标签：去除隐藏，显示带有 Loading 动画的占位符 "-"
+            citationElements.forEach(el => {
+                el.innerHTML = `<i class="fas fa-spinner fa-spin mr-1"></i> Citations: -`;
+                el.classList.remove('hidden');
+                el.classList.add('inline-flex');
+            });
+
+            // 2. 建立排队与重试机制 (最多尝试15次，防止死循环)
+            const retryCounts = new Map();
+            let queue = [...citationElements];
+
+            while (queue.length > 0) {
+                const el = queue.shift(); // 取出队列里的第一个
+                const paperId = el.getAttribute('data-paper-id');
+                const title = el.getAttribute('data-title');
+                let success = false;
+                
+                const currentRetries = retryCounts.get(el) || 0;
+
+                try {
+                    let count = undefined;
+                    let response = null;
+                    
+                    if (paperId) {
+                        const url = `https://api.semanticscholar.org/graph/v1/paper/${paperId}?fields=citationCount`;
+                        response = await fetch(url);
+                    } else if (title) {
+                        const cleanTitle = encodeURIComponent(title.replace(/[^a-zA-Z0-9 -]/g, "").trim());
+                        const url = `https://api.semanticscholar.org/graph/v1/paper/search?query=${cleanTitle}&limit=1&fields=citationCount`;
+                        response = await fetch(url);
+                    }
+                    
+                    if (response && response.ok) {
+                        const data = await response.json();
+                        if (paperId && data && data.citationCount !== undefined) {
+                            count = data.citationCount;
+                        } else if (!paperId && data.data && data.data.length > 0) {
+                            count = data.data[0].citationCount;
+                        }
+                        
+                        if (count !== undefined) {
+                            // 成功获取：替换成真实的数字
+                            el.innerHTML = `<i class="fas fa-quote-right mr-1"></i> Citations: ${count}`;
+                            success = true;
+                        } else {
+                            // 接口通了但没查到引用数据：显示0
+                            el.innerHTML = `<i class="fas fa-quote-right mr-1"></i> Citations: 0`;
+                            success = true;
+                        }
+                    }
+                } catch (error) {
+                    // 静默捕获错误，不让控制台报错刷屏
+                }
+                
+                if (!success) {
+                    // 如果失败（通常是因为并发被限流），把它重新塞回队列末尾！
+                    if (currentRetries < 15) { 
+                        retryCounts.set(el, currentRetries + 1);
+                        queue.push(el); 
+                        // 被限流了，强行等待 2 秒让服务器喘口气
+                        await new Promise(r => setTimeout(r, 2000));
+                    } else {
+                        // 重试了15次还是不行，显示 N/A
+                        el.innerHTML = `<i class="fas fa-exclamation-circle mr-1"></i> N/A`;
+                    }
+                } else {
+                    // 获取成功！必须等待至少 1.2 秒再拉取下一个（严格遵守接口 1次/秒 的限制）
+                    await new Promise(r => setTimeout(r, 1200));
+                }
+            }
+        }
+        
+        // Run the fetch function after the page loads
+        document.addEventListener('DOMContentLoaded', fetchCitations);
+    </script>
+</body>
+</html>
