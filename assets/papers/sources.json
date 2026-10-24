@@ -1,0 +1,11 @@
+{
+  "gotr1": "https://arxiv.org/html/2505.17022v2/teaser.png",
+  "codeplot": "https://math-vr.github.io/static/images/teaser.png",
+  "comp": "https://karine-h.github.io/T2I-CompBench-new/assets/intro_image.png",
+  "uniclaw": "https://arxiv.org/html/2607.08768v1/teaser.png",
+  "got": "https://arxiv.org/html/2503.10639v1/teaser_rec.png",
+  "flux": "https://flux-reason-6m.github.io/static/images/teaser.png",
+  "puma": "https://arxiv.org/html/2410.13861v2/teaser_iclr.png",
+  "reason": "https://arxiv.org/html/2508.17472v1/teaser.png",
+  "robust": "https://arxiv.org/html/2305.15241v2/nips_flow.png"
+}
